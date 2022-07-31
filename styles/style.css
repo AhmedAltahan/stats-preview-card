@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+}   
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image {
+    position: relative;
+}
+
+.image::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(83, 10, 128, 0.5);
+}
+
+.content {
+    padding: 13%;
+}
+
+.content h1 {
+    color:  hsl(0, 0%, 100%);
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.content h1 span {
+    color:  rgba(83, 10, 128);
+    
+}
+
+.content p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.collection {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px ;
+}
+
+p.one {
+    color:  hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+p.two {
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+
+
+@media screen and (max-width : 425px) {
+    
+    
+    .main {
+        grid-template-columns: 1fr ;
+    }   
+
+    .image {
+        order: -1;
+    }
+    
+    .content {
+        padding: 7%;
+        text-align: center;
+
+    }
+
+    .collection {
+        display: flex;
+        flex-flow: column;
+        padding-top: 30px ;
+    }
+
+    .detail {
+        margin-bottom: 10px;
+    }
+
+    p.two {
+        padding-top: 3px;
+    }
+
+}
